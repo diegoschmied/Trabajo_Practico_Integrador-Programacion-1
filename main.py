@@ -1,6 +1,8 @@
 # IMPORTO FUNCIONES
-from funciones.mostrar_resultados import mostrar_resultados
+from funciones.altas import *
+from funciones.archivo import *
 
+paises = cargar_paises()
 
 opcion = 0
 
@@ -18,8 +20,14 @@ while opcion != 7:
         print("\n<------------------------->\n")
         opcion = int(input("<<< Seleccione una opción: "))
 
-        if opcion == 8:
-            mostrar_resultados()
+        if opcion == 1:
+            agregar_pais(paises)
+
+        elif opcion == 2:
+            actualizar_pais(paises)
+
+        elif opcion == 8:
+            mostrar_todos_los_paises(paises)
 
         elif opcion == 7:   
             print("Saliendo del sistema...")
