@@ -1,6 +1,8 @@
 # IMPORTO FUNCIONES
 from funciones.altas import *
 from funciones.archivo import *
+from funciones.busqueda import buscar_pais
+from funciones.filtros import ejecutar_filtros
 
 paises = cargar_paises()
 
@@ -25,6 +27,12 @@ while opcion != 7:
 
         elif opcion == 2:
             actualizar_pais(paises)
+
+        elif opcion == 3:
+            buscar_pais(paises)
+
+        elif opcion == 4:
+            ejecutar_filtros(paises)
 
         elif opcion == 8:
             mostrar_todos_los_paises(paises)

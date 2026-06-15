@@ -15,7 +15,7 @@ def agregar_pais(paises):
                 "nombre": nombre.capitalize(),
                 "poblacion": poblacion,
                 "superficie": superficie,
-                "continente": continente
+                "continente": continente.capitalize()
         }
 
         paises.append(nuevo_pais)

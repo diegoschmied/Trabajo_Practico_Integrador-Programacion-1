@@ -33,13 +33,14 @@ def guardar_paises(paises):
         # Mapea automáticamente las claves del diccionario a las columnas correspondientes del archivo
         escritor = csv.DictWriter(archivo, fieldnames=campos)
 
+        escritor.writeheader()
+
         escritor.writerows(paises)
 
 
 # Muestra todos los paises juntos
 def mostrar_todos_los_paises(paises):
-    with open("datos/paisesprueba.csv", "r", encoding="utf-8") as datos_paises:
-        for linea in datos_paises:
+        for linea in paises:
             linea_limpia = linea.strip()
             nombre, poblacion, superficie, continente = linea_limpia.split(",")
-            print(f"Pais: {nombre} | Población: {poblacion} Habitantes | Superficie: {superficie} km²| Continente: {continente}\n")
+            print(f"Pais: {nombre} | Población: {poblacion} Habitantes | Superficie: {superficie} km² | Continente: {continente}\n")
