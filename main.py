@@ -5,24 +5,17 @@ from funciones.busqueda import buscar_pais
 from funciones.filtros import ejecutar_filtros
 from funciones.estadisticas import mostrar_estadisticas
 from funciones.ordenamientos import ejecutar_ordenamientos
+from funciones.menus import menu_principal
 
 paises = cargar_paises()
 
+
 opcion = 0
 
-while opcion != 7:
+while True:
     try: 
-        print("\n<---- MENÚ ---->\n")
-        print(" 1 - AGREGAR PAIS")
-        print(" 2 - ACTUALIZAR DATOS DE UN PAIS")
-        print(" 3 - BUSCAR PAIS")
-        print(" 4 - FILTRAR PAISES")
-        print(" 5 - ORDENAR PAISES")
-        print(" 6 - MOSTRAR ESTADISTICAS")
-        print(" 7 - SALIR")
-        print(" 8 - PRUEBA CSV")
-        print("\n<------------------------->\n")
-        opcion = int(input("<<< Seleccione una opción: "))
+        
+        opcion = menu_principal()
 
         if opcion == 1:
             agregar_pais(paises)
@@ -46,7 +39,8 @@ while opcion != 7:
             mostrar_todos_los_paises(paises)
 
         elif opcion == 7:   
-            print("Saliendo del sistema...")
+            print("\n< Saliendo del sistema...\n")
+            break
 
         else:
             raise ValueError("La opción ingresada está fuera de rango (debe ser entre 1 y 7)")

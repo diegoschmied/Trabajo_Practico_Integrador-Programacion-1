@@ -1,4 +1,4 @@
-# ORDENAR PAIS
+# ORDENAR PAISES
 from funciones.menus import menu_ordenamiento
 
 

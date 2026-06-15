@@ -1,29 +1,33 @@
 # FILTRAR PAISES
 from funciones.menus import menu_filtro
+from funciones.validaciones import *
 
 def filtrar_continente(paises):
     encontrado = False
 
-    continente_filtro = input("Ingrese el continente a filtrar: ").lower()
+    continente_filtro = input("< Ingrese el continente a filtrar: ").lower()
 
-    for continente in paises:
-        if continente_filtro in continente["continente"].lower():
+    continente_filtro = validacion_letras(continente_filtro)
+
+    for pais in paises:
+        if continente_filtro in pais["continente"].lower():
 
             encontrado = True
 
-            print(f"Pais: {continente["nombre"]} | Población: {continente["poblacion"]} Habitantes | Superficie: {continente["superficie"]} km² | Continente: {continente["continente"]}")
+            print(f"\nPais: {pais["nombre"]} | Población: {pais["poblacion"]} Habitantes | Superficie: {pais["superficie"]} km² | Continente: {pais["continente"]}")
 
     if not encontrado:
-
         print("No hay coincidencias")
 
 
 def filtrar_poblacion(paises):
     encontrado = False
 
-    poblacion_rango_minimo = int(input("Ingrese el rango mínimo: "))
+    poblacion_rango_minimo = input("< Ingrese el rango mínimo: ")
+    poblacion_rango_minimo = validacion_numeros(poblacion_rango_minimo)
 
-    poblacion_rango_maximo = int(input("Ingrese el rango máximo: "))
+    poblacion_rango_maximo = input("< Ingrese el rango máximo: ")
+    poblacion_rango_maximo = validacion_numeros(poblacion_rango_maximo)
 
 
     for poblacion in paises:
@@ -31,7 +35,7 @@ def filtrar_poblacion(paises):
 
             encontrado = True
 
-            print(f"Pais: {poblacion["nombre"]} | Población: {poblacion["poblacion"]} Habitantes | Superficie: {poblacion["superficie"]} km² | Continente: {poblacion["continente"]}")
+            print(f"\nPais: {poblacion['nombre']} | Población: {poblacion['poblacion']} Habitantes | Superficie: {poblacion['superficie']} km² | Continente: {poblacion['continente']}")
 
     if not encontrado:
 
@@ -41,9 +45,11 @@ def filtrar_poblacion(paises):
 def filtrar_superficie(paises):
     encontrado = False
 
-    superficie_rango_minimo = int(input("Ingrese el rango mínimo: "))
+    superficie_rango_minimo = input("< Ingrese el rango mínimo: ")
+    superficie_rango_minimo = validacion_numeros(superficie_rango_minimo)
 
-    superficie_rango_maximo = int(input("Ingrese el rango máximo: "))
+    superficie_rango_maximo = input("< Ingrese el rango máximo: ")
+    superficie_rango_maximo = validacion_numeros(superficie_rango_maximo)
 
 
     for superficie in paises:
@@ -51,7 +57,7 @@ def filtrar_superficie(paises):
 
             encontrado = True
 
-            print(f"Pais: {superficie["nombre"]} | Población: {superficie["poblacion"]} Habitantes | Superficie: {superficie["superficie"]} km² | Continente: {superficie["continente"]}")
+            print(f"\nPais: {superficie["nombre"]} | Población: {superficie["poblacion"]} Habitantes | Superficie: {superficie["superficie"]} km² | Continente: {superficie["continente"]}")
 
     if not encontrado:
 
