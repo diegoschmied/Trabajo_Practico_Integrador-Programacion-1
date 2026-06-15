@@ -3,6 +3,7 @@ from funciones.altas import *
 from funciones.archivo import *
 from funciones.busqueda import buscar_pais
 from funciones.filtros import ejecutar_filtros
+from funciones.estadisticas import mostrar_estadisticas
 
 paises = cargar_paises()
 
@@ -33,6 +34,9 @@ while opcion != 7:
 
         elif opcion == 4:
             ejecutar_filtros(paises)
+
+        elif opcion == 6:
+            mostrar_estadisticas(paises)
 
         elif opcion == 8:
             mostrar_todos_los_paises(paises)
