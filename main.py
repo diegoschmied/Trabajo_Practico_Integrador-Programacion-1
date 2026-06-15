@@ -35,9 +35,6 @@ while True:
         elif opcion == 6:
             mostrar_estadisticas(paises)
 
-        elif opcion == 8:
-            mostrar_todos_los_paises(paises)
-
         elif opcion == 7:   
             print("\n< Saliendo del sistema...\n")
             break
