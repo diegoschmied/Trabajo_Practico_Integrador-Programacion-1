@@ -11,6 +11,7 @@ def agregar_pais(paises):
 
         nombre = input("< Ingrese el nombre del país: ").capitalize()
         nombre = validacion_letras(nombre)
+        nombre = validacion_pais_repetido(nombre, paises)
 
 
         for pais in paises:
