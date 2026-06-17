@@ -46,3 +46,6 @@ Trabajo_Practico_Integrador/
 2. Abrir el proyecto en Visual Studio Code.
 3. Verificar que exista el archivo CSV dentro de la carpeta `datos`.
 4. Ejecutar python main.py
+# Enlace al video explicativo
+
+https://youtu.be/e7Pc-jyGI0k 
