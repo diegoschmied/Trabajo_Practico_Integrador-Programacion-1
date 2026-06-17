@@ -11,11 +11,10 @@ def menu_principal():
             print(" 5 - ORDENAR PAISES")
             print(" 6 - MOSTRAR ESTADISTICAS")
             print(" 7 - SALIR")
-            print(" 8 - PRUEBA CSV\n")
 
             opcion = int(input("Seleccione una opción: "))
 
-            if 1 <= opcion <= 8:
+            if 1 <= opcion <= 7:
                 return opcion
             else:
                 print("Opción fuera de rango")

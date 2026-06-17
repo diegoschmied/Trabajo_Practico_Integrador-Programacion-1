@@ -90,9 +90,3 @@ def guardar_paises(paises):
                 "ERROR CSV\n"
                 "Error al guardar el archivo\n"
                 "-----------------------------")
-
-
-# Muestra todos los paises juntos
-def mostrar_todos_los_paises(paises):
-        for pais in paises:
-            print(f"Pais: {pais['nombre']} | Población: {pais['poblacion']} Habitantes | Superficie: {pais['superficie']} km² | Continente: {pais['continente']}\n")
